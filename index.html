@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/favicon.ico">
+    <title>YoutubeApi</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    
+
+</head>
+<body>
+
+    <h1>Youtube API</h1>
+    <br>
+    <br>
+    <h2>Como consultar una api?</h2>
+
+    <div class="contenedorExp">
+        <p>Para consultar una api debemos contar con la URL, el APIkey y el IDchannel. Si tenemos eso ya podemos iniciar el recorrido.
+        En principio consultar una api implica que hay que realizar una solicitud "fetch" pero antes hay que 
+        declarar las variables contantes que utiliaremos.Una constante para la APIkey, otra para la URL y otra
+        para el ID, como así también recoger el elemento html que mostrara los resultados.<br>
+        Luego podemos realizar el "fetch" para manejar los datos de la respuesta. Alli utilizamos la 
+        palabra reservada .then que si la solicitud es exitosa convierte los datos a JSON. Elegimos las propiedades
+        que queremos tomar y realizamos un forEach que itera la lista de videos. Para cada video creamos un iframe
+        .Para que el mismo sea mostrado debemos crearlo con createElemtent para agregarlo al DOM. 
+        Es por eso que que agregamos un appendChild al contenedor que aloja los videos.</p>
+    <br>
+       
+    </div>
+    <div>
+        <p class="apartado">Este es un pequeño resumen de como realizar una consulta a una api.</p>
+    </div>
+    <br>
+
+    <div class="videosDestacados">Videos destacados</div>
+
+    
+    <div id="videos-container"></div>
+
+    
+       
+    <script src="./js/js.js"></script>
+</body>
+</html>
