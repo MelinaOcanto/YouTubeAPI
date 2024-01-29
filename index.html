@@ -15,30 +15,90 @@
     <h1>Youtube API</h1>
     <br>
     <br>
-    <h2>Como consultar una api?</h2>
-
-    <div class="contenedorExp">
-        <p>Para consultar una api debemos contar con la URL, el APIkey y el IDchannel. Si tenemos eso ya podemos iniciar el recorrido.
-        En principio consultar una api implica que hay que realizar una solicitud "fetch" pero antes hay que 
-        declarar las variables contantes que utiliaremos.Una constante para la APIkey, otra para la URL y otra
-        para el ID, como así también recoger el elemento html que mostrara los resultados.<br>
-        Luego podemos realizar el "fetch" para manejar los datos de la respuesta. Alli utilizamos la 
-        palabra reservada .then que si la solicitud es exitosa convierte los datos a JSON. Elegimos las propiedades
-        que queremos tomar y realizamos un forEach que itera la lista de videos. Para cada video creamos un iframe
-        .Para que el mismo sea mostrado debemos crearlo con createElemtent para agregarlo al DOM. 
-        Es por eso que que agregamos un appendChild al contenedor que aloja los videos.</p>
-    <br>
-       
-    </div>
-    <div>
-        <p class="apartado">Este es un pequeño resumen de como realizar una consulta a una api.</p>
-    </div>
+    
     <br>
 
     <div class="videosDestacados">Videos destacados</div>
 
     
     <div id="videos-container"></div>
+    <br>
+    <h2>Pasos para consultar una api (Interfaz de programación de aplicaciones)</h2>
+
+    <div class="contenedorExp">
+        <p>En principio debemos contar con: </p>
+        <br>
+        <ul>
+            <li>
+                URL(Localizador de recursos)
+            </li>
+            <br>
+            <li>
+                APIkey(Clave personal para el acceso a una interfaz)
+            </li>
+            <br>
+            <li>
+                IDchanell(Identificador del canal)
+            </li>
+            <br>
+        </ul>
+        <br>
+        <p>
+            Consultar una api implica que hay que realizar una solicitud ("fetch"), pero antes hay que 
+        declarar las variables contantes que utilizaremos.<br><br>
+        <b>Una variable constante:</b> es una entidad cuyo valor no cambia cuando se ha inicializado. <br><br>
+        Debemos entonces crear las siguientes variables: <br></p><br>
+        <ul>
+            <li>
+                const key = "...";
+            </li>
+            <br>
+            <li>
+                const IDchanel = "...";
+            </li>
+            <br>
+            <li>
+                const URL = `https://www...`; 
+            </li>
+            <br>
+        </ul>
+        <br>
+        <p> También debemos recoger el elemento html que mostrará los resultados. 
+            En el HTML contruímos un contenedor para mostrar los resultados de la solicitud y 
+            luego llamamos a ese elemento en JS. 
+            Cómo? Declarando una variable constante con el ID del elemento, utilizando el método 
+            document.getElementById. Aquí hay un ejemplo:<br>
+            <br>
+            <b>const videosContainer = document.getElementById("videos-container");</b>
+            <br>
+            <br>
+            Luego realizamos el <b>"fetch"</b> para manejar los datos de la respuesta. Allí utilizamos el metodo
+            .then que se utiliza para manejar el resultado exitoso de una manera asíncrona.<br>
+            La solicitud puede arrojar dos resultados: respuesta exitosa o no. <br>
+            <br>
+            <b>Respuesta no exitosa:</b> muestra un error.<br>
+            <br>
+            <b>Respuesta exitosa:</b> retorna un JSON (contiene información sobre los videos de YouTube).<br>
+            <br>
+            Al obtener el JSON debemos contruir una variable que guarde las propiedades que nos interesa obtener
+            de ese objeto. <br>
+            Con el método <b>forEach</b> iteramos la lista de videos, y para cada video creamos un iframe. 
+            Como esa etiqueta no está en el archivo HTML lo insertamos desde JS con createElement. 
+            Es por eso que agregamos un appendChild al contenedor que aloja los videos.
+            <br>
+            <br>
+            <br>
+            Esto fue un breve resumen de cómo consultar una api!!!
+            </p>
+            <br>
+            <br>
+            
+       
+        
+    <br>
+       
+    </div>
+    
 
     
        
